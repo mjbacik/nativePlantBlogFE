@@ -1,0 +1,52 @@
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  text-align: left;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+  padding-bottom: 30px;
+}
+.imageAdd {
+  margin-bottom: 20px;
+  cursor: pointer;
+  max-width: 100px;
+}
+.imagePreview {
+  max-width: 150px;
+}
+.attachImage {
+  padding: 20px;
+  border: solid black 1px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom:24px;
+}
+button {
+  border-radius: 10px;
+  border: 1px solid black;
+  color: white;
+  background-color: #3089db;
+  padding: 5px 10px 5px 10px;
+  margin: 10px;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin:24px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

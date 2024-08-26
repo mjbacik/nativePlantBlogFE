@@ -1,0 +1,190 @@
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
+* {
+  font-family: "Poppins";
+}
+.searchcontainer {
+  text-align: center;
+  position: relative;
+  margin-bottom: 10px;
+}
+.cursor {
+  cursor: pointer;
+}
+.dashboardTile {
+  background-color: black;
+  padding: 20px;
+}
+.searchbox {
+  padding: 18px;
+  padding-left: 45px;
+  min-width: 90%;
+  border-radius: 30px;
+  display: inline-block;
+  border: 1px solid;
+}
+.grey {
+  color: #3b3939;
+}
+.i {
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.tileText {
+  padding-top: 10px;
+  color: white;
+}
+.i:hover {
+  cursor: pointer;
+}
+.product_sans {
+  font-family: "Product Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans"), local("OpenSans"),
+    url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2)
+      format("woff2");
+}
+.button {
+  border-color: white;
+  color: white;
+  border-radius: 0px 20px 20px 0px;
+  margin-bottom: 50px;
+}
+.keywords {
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-weight: 100;
+}
+.resName {
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  color: white;
+}
+.rating-title {
+  padding: 0;
+  margin: 0;
+}
+.ratings {
+  position: relative;
+  vertical-align: bottom;
+  display: inline-block;
+  color: #b1b1b1;
+  overflow: hidden;
+}
+.tileImg {
+  width: 100%;
+  opacity: 0.8;
+  object-fit: cover;
+  cursor: pointer;
+  aspect-ratio: 5/6.5;
+}
+.outerTile {
+  position: relative;
+  background-color: #3089db;
+  cursor: pointer;
+}
+.innerTile {
+  position: relative;
+  background-color: #3b3939;
+  overflow: hidden;
+  max-width: 100%;
+  cursor: pointer;
+}
+.overText {
+  position: absolute;
+  bottom: 5%;
+  width: 90%;
+  left: 5%;
+  z-index: 99;
+}
+
+/* Webkit-text-stroke is not supported on firefox or IE */
+/* Firefox */
+@-moz-document url-prefix() {
+  .full-stars {
+    color: #ecbe24;
+  }
+}
+.search-icon {
+  position: absolute;
+  top: 28%;
+  left: 10%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.featured {
+  padding-left: 20px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.green {
+  color: #40ce87;
+}
+.yellow {
+  color: #d1b635;
+}
+.blue {
+  color: #3089db;
+}
+body {
+  margin: 0;
+}
+.font_weight_400 {
+  font-weight: 400;
+}
+
+.remove_bottom_padding_margin {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.pagenum {
+  display: inline-block;
+  padding: 5px;
+}
+.pages {
+  text-align: center;
+  padding: 15px;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.pageNumSelected {
+  color: #3089db;
+  text-decoration: underline;
+}
+.padAbove {
+  padding-top: 30px;
+}
+.padBelow {
+  margin-bottom: 30px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 30px;
+  line-height: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .search-icon {
+    left: 16%;
+  }
+  .searchbox {
+    padding: 18px;
+    padding-left: 45px;
+    min-width: 70%;
+    border-radius: 30px;
+    display: inline-block;
+    border: 1px solid;
+  }
+}

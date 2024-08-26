@@ -1,0 +1,14 @@
+.outer {
+	background-color: #3089db;
+	padding: 10px;
+	padding-bottom: 30px;
+	color: white;
+	min-height: 80px;
+	text-align: center;
+}
+.nextTo {
+	margin-top: 10px;
+	min-height: 100%;
+	margin-bottom: 0;
+	color: inherit;
+}

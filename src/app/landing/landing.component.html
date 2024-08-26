@@ -1,0 +1,29 @@
+<head>
+	<meta charset="utf-8" />
+	<title>NativePlantBlog | We love native plants</title>
+	<meta
+		name="description"
+		content="Native plants have envolved for centuries with their local ecologies and thus are more beneificial to the environment and more disease reistant."
+	/>
+	<base href="/" />
+</head>
+
+<div class="landingBack" style="padding: 50px">
+	<h1>Blogs</h1>
+	<div class="partyRow" *ngFor="let blog of blogs">
+		<div
+			class="partyBlock"
+			style="display: inline-block; vertical-align: top"
+		>
+			<h2 style="display: inline-block; margin-right: 10px">
+				{{ blog.title }}
+			</h2>
+			<br />
+			<p style="display: inline-block; margin-right: 10px">
+				{{ blog.subject }}
+			</p>
+			<br />
+			<button (click)="goToBlog(blog)">View Blog Page</button>
+		</div>
+	</div>
+</div>

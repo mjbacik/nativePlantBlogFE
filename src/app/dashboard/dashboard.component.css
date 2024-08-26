@@ -1,0 +1,40 @@
+.partyBlock {
+	margin-top: 15px;
+	padding: 5px;
+}
+
+button {
+	border-radius: 10px;
+	border: 1px solid black;
+	color: white;
+	background-color: #3089db;
+	padding: 5px 10px 5px 10px;
+	margin: 10px;
+}
+.create {
+	background-color: #40ce87;
+	font-size: 120%;
+}
+
+input {
+	border: 0;
+	outline: 0;
+	background: transparent;
+	border-bottom: 1px solid black;
+	margin-right: 10px;
+}
+.partyRow {
+	margin: 15px;
+	padding: 30px;
+	border-radius: 10px;
+	border: 3px solid #3089db;
+}
+.padBottom {
+	padding-bottom: 15px;
+}
+.minusButton {
+	display: inline-block;
+	max-width: 20px;
+	margin-left: 10px;
+	cursor: pointer;
+}

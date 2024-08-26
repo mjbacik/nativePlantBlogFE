@@ -1,0 +1,216 @@
+.info {
+  color: white;
+  text-align: left;
+  width: 100%;
+  display: table;
+  padding-left: 0px;
+  padding-right: 25px;
+}
+.containerPic {
+  position: relative;
+  width: 100%;
+  padding: 24px;
+}
+.partyBlock {
+  margin-top: 15px;
+  padding: 5px;
+}
+
+button {
+  border-radius: 10px;
+  border: 1px solid black;
+  color: white;
+  background-color: #3089db;
+  padding: 5px 10px 5px 10px;
+  margin: 10px;
+}
+.create {
+  background-color: #40ce87;
+  font-size: 120%;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  margin-right: 10px;
+}
+.partyRow {
+  margin: 15px;
+  padding: 30px;
+  border-radius: 10px;
+  border: 3px solid #3089db;
+}
+.padBottom {
+  padding-bottom: 15px;
+}
+.minusButton {
+  display: inline-block;
+  max-width: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.imageContainer {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageContainer img {
+  height: 100px;
+}
+.mockNewsletterImage {
+  border-radius: 24px;
+  margin: 32px;
+  min-width: 80%;
+  margin-top: 0px;
+}
+.item {
+  margin-top: 30px;
+  border-radius: 24px;
+  background-color: #f7f7f7;
+  display: block;
+  overflow: auto;
+  min-height: 100%;
+}
+.text {
+  padding: 16px;
+  color: #212529;
+}
+.emailSection {
+  padding-top: 64px;
+  padding-left: 15%;
+  padding-right: 25%;
+}
+
+.itemOuter {
+  padding: 32px;
+}
+.features {
+  background-color: white;
+  padding: 64px;
+}
+
+.landing {
+  max-width: 70%;
+  margin-top: 15px;
+  border-radius: 15px;
+}
+.textIntro {
+  padding-left: 96px;
+}
+.textIntro p {
+  font-size: 20px;
+}
+.row {
+  max-width: 100%;
+}
+.landingBack {
+  background-color: #f7f7f7;
+  max-width: 100%;
+  padding-top: 5%;
+  padding-bottom: 100px;
+  color: #313131;
+}
+.bottomSection {
+  padding-top: 64px;
+}
+.padRight {
+  padding-right: 10%;
+}
+.section {
+  text-align: center;
+}
+#grad {
+  background-image: linear-gradient(to right, #f7f7f7, #4a87d6);
+}
+
+.container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-right: 0;
+  margin-left: 0;
+}
+.container2 {
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button {
+  border-radius: 25px;
+  border: 1px solid black;
+  color: white;
+  background-color: #3089db;
+  padding: 10px 15px 10px 15px;
+  margin: 10px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .mobileImage {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .nonMobileImage {
+    display: none;
+  }
+  .container2 {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .landing {
+    max-width: 100%;
+  }
+  .padRight {
+    padding: 0px;
+  }
+  .mockNewsletterImage {
+    margin: 0px;
+    max-width: 80%;
+    margin-left: 10%;
+  }
+  .textIntro {
+    padding-left: 64px;
+    padding-right: 24px;
+  }
+  .textIntro p {
+    font-size: 17px;
+  }
+  .textIntro h1 {
+    font-size: 24px;
+  }
+  .emailSection {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .features {
+    padding: 32px;
+    margin: 0;
+  }
+  .bottomSection {
+    padding: 32px;
+    margin: 0;
+    padding-bottom: 0px;
+  }
+  .itemOuter {
+    padding: 16px;
+  }
+  .landing2 {
+    margin-bottom: 32px;
+  }
+}

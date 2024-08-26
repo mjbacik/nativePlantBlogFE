@@ -1,0 +1,24 @@
+<div class="header">
+	<div class="textBlock" routerLink="/">
+		<div style="display: inline-block; vertical-align: top">
+			<img
+				class="icon cursor"
+				src="assets/nativePlantLogo.png"
+				alt="Native plant logo"
+			/>
+		</div>
+		<div style="display: inline-block; text-align: left">
+			<h1 class="product_sans cursor">
+				<b><span class="blue">Native Plants Blog</span></b>
+			</h1>
+			<h3 class="grey">we love plants</h3>
+		</div>
+	</div>
+	<div *ngIf="user" routerLink="/dashboard" class="nameButton">
+		<h5>{{ userName }}'s Dashboard</h5>
+	</div>
+	<div *ngIf="!user" routerLink="/register" class="nameButton">
+		<h5>Sign Up/ Log In</h5>
+	</div>
+	<hr style="margin-bottom: 0" />
+</div>

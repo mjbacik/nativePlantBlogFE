@@ -1,0 +1,65 @@
+<div class="container padAbove padBelow">
+	<form [formGroup]="createForm" #formDir="ngForm">
+		<div class="mb-3">
+			<label for="title">Post Title</label>
+			<input
+				type="search"
+				placeholder="Title"
+				aria-label="Title text box"
+				#title
+				id="title"
+				type="text"
+				class="form-control"
+				name="title"
+				formControlName="title"
+				required
+			/>
+			<div
+				*ngIf="
+					createForm.get('title').invalid &&
+					(createForm.get('title').dirty ||
+						createForm.get('title').touched)
+				"
+				class="blue"
+			>
+				Please enter a post title.
+			</div>
+		</div>
+		<div class="mb-3">
+			<label for="text">Blog Post</label>
+			<input
+				type="search"
+				placeholder="Enter the text for your blog post here"
+				aria-label="Post text box"
+				#text
+				id="text"
+				type="text"
+				class="form-control"
+				name="text"
+				formControlName="text"
+				required
+			/>
+			<div
+				*ngIf="
+					createForm.get('text').invalid &&
+					(createForm.get('text').dirty ||
+						createForm.get('text').touched)
+				"
+				class="blue"
+			>
+				Please enter the text to your blog post here.
+			</div>
+		</div>
+
+		<br />
+
+		<button
+			type="button"
+			class="btn btn-outline-dark"
+			(click)="submit(blog, title.value, text.value)"
+			[disabled]="createForm.invalid"
+		>
+			Submit
+		</button>
+	</form>
+</div>

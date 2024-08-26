@@ -1,0 +1,97 @@
+<div class="container">
+	<h1 style="margin-top: 64px">
+		Create an account or login to start posting!
+	</h1>
+	<br />
+	<div class="morePadding">
+		<div class="modal-body">
+			<form [formGroup]="registerForm" #formDir="ngForm">
+				<div class="mb-3">
+					<label for="email">Email</label>
+					<input
+						#email
+						id="email"
+						class="form-control"
+						placeholder="Email"
+						name="email"
+						formControlName="email"
+						required
+					/>
+					<div
+						*ngIf="
+							registerForm.get('email').invalid &&
+							(registerForm.get('email').dirty ||
+								registerForm.get('email').touched)
+						"
+						class="blue"
+					>
+						Please provide an email.
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="password"
+						>Password [NOTE: not secure, for example
+						purposes]</label
+					>
+					<input
+						#password
+						id="password"
+						class="form-control"
+						placeholder="Password"
+						name="password"
+						formControlName="password"
+						required
+					/>
+					<div
+						*ngIf="
+							registerForm.get('password').invalid &&
+							(registerForm.get('password').dirty ||
+								registerForm.get('password').touched)
+						"
+						class="blue"
+					>
+						Please provide a password.
+					</div>
+				</div>
+				<div class="mb-3">
+					<label for="firstName">First Name</label>
+					<input
+						type="search"
+						placeholder="First Name"
+						aria-label="User first name"
+						#firstName
+						id="firstName"
+						type="text"
+						class="form-control"
+						name="firstName"
+						formControlName="firstName"
+						required
+					/>
+					<div
+						*ngIf="
+							registerForm.get('firstName').invalid &&
+							(registerForm.get('firstName').dirty ||
+								registerForm.get('firstName').touched)
+						"
+						class="blue"
+					>
+						Please enter your first name.
+					</div>
+				</div>
+				<button
+					type="button"
+					class="btn btn-outline-dark"
+					(click)="
+						submit({
+							email: email.value,
+							firstName: firstName.value
+						})
+					"
+					[disabled]="registerForm.invalid"
+				>
+					Sign Up/ Log In
+				</button>
+			</form>
+		</div>
+	</div>
+</div>

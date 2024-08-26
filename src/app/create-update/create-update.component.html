@@ -1,0 +1,172 @@
+<!-- <div class="container padAbove padBelow">
+	<ngb-toast
+		*ngFor="let toast of toasts"
+		class="bg-success text-light success-toast toast-container position-fixed top-0 end-0 p-3"
+		[autohide]="true"
+		[delay]="toast.delay || 5000"
+		(hidden)="remove(toast)"
+	>
+		<ng-template [ngIf]="isTemplate(toast)" [ngIfElse]="text">
+			<ng-template [ngTemplateOutlet]="toast.textOrTpl"></ng-template>
+		</ng-template>
+
+		<ng-template #text>{{ toast.textOrTpl }}</ng-template>
+	</ngb-toast>
+	<br />
+	<div *ngIf="alreadyAnswered | async">
+		<h1>Questions already answered, thank you! See you next time.</h1>
+		<button routerLink="/dashboard">Go to dashboard</button>
+	</div>
+	<form
+		[formGroup]="updateForm"
+		#formDir="ngForm"
+		*ngIf="!(alreadyAnswered | async)"
+	>
+		<div class="mb-3" *ngIf="promptFirstName | async">
+			<label for="firstName">First Name</label>
+			<input
+				type="search"
+				placeholder="First Name"
+				aria-label="First name text box"
+				#firstName
+				id="firstName"
+				type="text"
+				class="form-control"
+				name="firstName"
+				formControlName="firstName"
+				required
+			/>
+			<div
+				*ngIf="
+					updateForm.get('firstName').invalid &&
+					(updateForm.get('firstName').dirty ||
+						updateForm.get('firstName').touched)
+				"
+				class="blue"
+			>
+				Please enter your first name.
+			</div>
+		</div>
+		<div class="mb-3">
+			<label *ngIf="questionsLoaded | async" for="question1">{{
+				question1Prompt
+			}}</label>
+			<input
+				type="search"
+				placeholder="Question 1 Response"
+				aria-label="Question 1 text box"
+				#question1
+				id="question1"
+				type="text"
+				class="form-control"
+				name="question1"
+				formControlName="question1"
+				required
+			/>
+			<div
+				*ngIf="
+					updateForm.get('question1').invalid &&
+					(updateForm.get('question1').dirty ||
+						updateForm.get('question1').touched)
+				"
+				class="blue"
+			>
+				Please enter your question response.
+			</div>
+		</div>
+		<div class="mb-3">
+			<label *ngIf="questionsLoaded | async" for="question2">{{
+				question2Prompt
+			}}</label>
+			<input
+				type="search"
+				placeholder="Question 2 Response"
+				aria-label="Question 2 text box"
+				#question2
+				id="question2"
+				type="text"
+				class="form-control"
+				name="question2"
+				formControlName="question2"
+				required
+			/>
+			<div
+				*ngIf="
+					updateForm.get('question2').invalid &&
+					(updateForm.get('question2').dirty ||
+						updateForm.get('question2').touched)
+				"
+				class="blue"
+			>
+				Please enter your question response.
+			</div>
+		</div>
+		<div class="mb-3">
+			<label *ngIf="questionsLoaded | async" for="question3">{{
+				question3Prompt
+			}}</label>
+			<input
+				type="search"
+				placeholder="Question 3 Response"
+				aria-label="Question 3 text box"
+				#question3
+				id="question3"
+				type="text"
+				class="form-control"
+				name="question3"
+				formControlName="question3"
+				required
+			/>
+			<div
+				*ngIf="
+					updateForm.get('question3').invalid &&
+					(updateForm.get('question3').dirty ||
+						updateForm.get('question3').touched)
+				"
+				class="blue"
+			>
+				Please enter your question response.
+			</div>
+		</div>
+		<p>{{ imagesPrompt }} (about 3 works best!)</p>
+		<input
+			style="display: none"
+			id="input-file-id"
+			multiple
+			type="file"
+			accept="image/JPG, image/png, image/*, .heic"
+			#fileInput
+			(change)="createFormData($event)"
+		/>
+		<label for="input-file-id" class="attachImage" id="click"
+			>Attach Images +</label
+		>
+		<br />
+		<div>
+			<div *ngIf="displaySpinner | async" class="loader"></div>
+			<img
+				*ngFor="let preview of imageList"
+				[src]="preview"
+				class="imagePreview"
+			/>
+		</div>
+
+		<br />
+
+		<button
+			type="button"
+			class="btn btn-outline-dark"
+			(click)="
+				submitResponse(
+					question1.value,
+					question2.value,
+					question3.value
+				); clicked = true;
+			"
+			[disabled]="updateForm.invalid || clicked"
+		>
+			Submit
+		</button>
+	</form>
+</div>
+ -->
